@@ -4,6 +4,8 @@
   "description": "My template",
   "main": "index.js",
   "scripts": {
+    "predeploy" : "yarn build",
+    "deploy" : "gh-pages -d build",
     "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server --open --config ./build/webpack.dev.conf.js",
     "build": "SET NODE_OPTIONS=--openssl-legacy-provider && webpack --config ./build/webpack.build.conf.js"
   },
