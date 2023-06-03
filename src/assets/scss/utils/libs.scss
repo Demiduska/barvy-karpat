@@ -3,7 +3,7 @@
    ========================================================================== */
 //normalize
 //@import "~normalize-css/normalize.css";
-@import "~selectize/dist/css/selectize.default.css";
+//@import "~selectize/dist/css/selectize.default.css";
 
 // Подключение нужных SCSS исходников Bootstrap 4
 //@import '~bootstrap/scss/_functions';
@@ -13,10 +13,12 @@
 //@import '~bootstrap/scss/_images';
 
 //animate
+@import "~animate.css";
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
-@import "~mmenu-light/dist/mmenu-light.css";
+//@import "~mmenu-light/dist/mmenu-light.css";
 //fancybox
 @import '~@fancyapps/fancybox/dist/jquery.fancybox.min.css';
+@import '~jquery-datetimepicker/build/jquery.datetimepicker.min.css';
 
 

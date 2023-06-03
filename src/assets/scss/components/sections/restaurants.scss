@@ -1,0 +1,35 @@
+.restaurants{
+  &__wrap{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  &__item{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 30px;
+  }
+  &__image{
+
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__subtitle{
+    color: #3D4C43;
+    margin-bottom: 13px;
+  }
+  &__title{
+    color: #3D4C43;
+    margin-bottom: 20px;
+  }
+  &__description{
+    color: #3D4C43;
+    margin-bottom: 20px;
+  }
+  &__button{
+    width: max-content;
+  }
+}

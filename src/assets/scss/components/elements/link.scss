@@ -1,0 +1,11 @@
+.link{
+  font-size: rem(15);
+  border-bottom: 1px solid $gold;
+  color: $gold;
+  text-transform: uppercase;
+  font-weight: 400;
+  &:hover{
+    color: $default-color;
+    border-bottom: 1px solid $default-color;
+  }
+}

@@ -1,170 +1,58 @@
 .header {
-
-  &__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    @media (max-width: $smDesktopWidth) {
-      position: relative;
-    }
-  }
-
-  &__logo {
-    min-width: 150px;
-    width: 16%;
-  }
-
-  &__contacts {
-    display: flex;
-    width: 34%;
-    align-items: center;
-    @media (max-width: $smDesktopWidth) {
-      width: 70%;
-      justify-content: flex-end;
-    }
-    @media (max-width: $tableWidth) {
-      display: none;
-    }
-
-    &-hours {
-      margin-right: rem(16);
-      font-size: rem(12);
-      line-height: rem(24);
-      color: $gray-3;
-    }
-
-    &-phone {
-      font-size: rem(18);
-      line-height: rem(20);
-      color: $mainFontColor;
-      letter-spacing: -0.01em;
-    }
-  }
-
-  &__search {
-    width: 45%;
-    margin-right: 15px;
-    @media (max-width: $smDesktopWidth) {
-      display: none;
-    }
-
-    &-form {
-      position: relative;
-      z-index: 101;
-      display: flex;
-      border: 1px solid #CFD2D7;
-      background: $default-color;
-      justify-content: space-between;
-
-      &-label {
-        display: flex;
-        align-items: center;
-        flex: 1 1;
-      }
-
-      .input-search{
-        padding: .3125rem 2.55rem;
-        min-height: rem(40);
-        width: 100%;
-        transition: all .3s ease-in-out;
-        @media (max-width: $smDesktopWidth) {
-          min-height: rem(44);
-        }
-        &:focus,&.focus{
-          padding-top: rem(18);
-          &::placeholder{
-            color: transparent;
-          }
-        }
-      }
-      .btn-search{
-        position: absolute;
-        right: rem(14);
-        height: 100%;
-        cursor: pointer;
-        padding-left: 0;
-        padding-right: 0;
-        .icon{
-
-        }
-      }
-      &-filter {
-        height: rem(24);
-        overflow-y: hidden;
-        position: absolute;
-        left: 10px;
-
-        .icon {
-          display: block;
-          stroke: $accent;
-          fill: $accent;
-          transition: transform .3s ease;
-        }
-
-        &.active {
-          .icon {
-            transform: translateY(-100%);
-          }
-        }
-      }
-
-      &-advanced {
-        position: absolute;
-        left: 0;
-        top: rem(39);
-      }
-    }
-
-  }
-
-  &__cart {
-    width: rem(24);
-    position: relative;
-    @media (max-width: $smDesktopWidth) {
-      display: none;
-    }
-
-    &-tooltip {
-      padding: rem(12) rem(24);
-      position: absolute;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity .3s ease;
-      background: $accent;
-      color: $default-color;
-      min-width: rem(154);
-      left: rem(-57);
-      bottom: rem(-55);
-      &:after{
-        position: absolute;
-        content: '';
-        display: block;
-        border: rem(8) solid transparent;
-        border-bottom: rem(8) solid $accent;
-        bottom: rem(42);
-        left: 40%;
-      }
-    }
-
-    &:hover{
-      .header__cart-tooltip{
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-  }
-
-  &__bottom{
-    @media (max-width: $smDesktopWidth) {
-      display: none;
-    }
-  }
-}
-header.header{
   position: fixed;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 100;
-  background: $default-color;
+  background: transparent;
+  transition: all .3s ease-in;
+  border-bottom: 1px solid #F5F7F2;
+  &__wrap{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    position: relative;
+  }
+  &__left,&__right{
+    display: flex;
+    align-items: center;
+  }
+  &__right{
+    justify-content: flex-end;
+  }
+  .container{
+    @media (max-width: $tableWidth){
+
+    }
+  }
+  &__logo{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    @media (max-width: $tableWidth) {
+
+    }
+    &-image{
+      text-align: center;
+      @media (max-width: $tableWidth){
+
+      }
+    }
+    &-text{
+      text-align: center;
+      color: $mainFontColor;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  &--sticky{
+    background: rgba(0,0,0,.4);
+
+
+  }
+  &__menu{
+
+    @media (max-width: $tableWidth) {
+
+    }
+  }
 }

@@ -2,10 +2,12 @@
    ========================================================================== */
 
 // Font
-$mainFont: 'RobotoCondensed', Helvetica, Arial, sans-serif;
+$mainFont: 'OpenSans', Helvetica, Arial, sans-serif;
+$fontPrata: 'Prata', Helvetica, Arial, sans-serif;
 
 // Size
-$mainFontColor: #2F3338;
+$mainFontColor: #F5F7F2;
+$mainBackgroundColor:#0c0c0b;
 $mainFontSize: 16px;
 $mainFontWeight: 400;
 
@@ -37,12 +39,15 @@ $gray-4: #CFD2D7;
 $gray-5: #E9EBED;
 $gray-6: #F5F6F7;
 $gray-7: #C7CBD1;
-$gold:#E2C661;
+$gold: #f3b655;
 $blue: #2da8d0;
-$black: #000;
+$purple: #48405f;
+$black: #2D3739;
 $accent: #F82249;
 $accent-15: #FEDEE4;
 $accent-hover: #B81A37;
+$brown: #976945;
+
 // Neutral Color
 $neutral-primary: #303133;
 $neutral-regular: #606266;

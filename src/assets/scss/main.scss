@@ -3,51 +3,73 @@
 @import "utils/vars";
 @import "utils/mixins";
 @import "utils/fonts";
-@import "components/elements/btns";
 @import "utils/spacing";
 @import "utils/flex";
 @import "utils/settings";
+
+@import "components/elements/menu";
+@import "components/elements/hamburger";
+@import "components/elements/btns";
 @import "components/elements/icons";
 @import "components/elements/text";
+//@import "components/elements/card";
+//@import "components/elements/tabs";
+//@import "components/elements/link";
+//@import "components/elements/author";
+//@import "components/elements/date";
+//@import "components/elements/form";
+//@import "components/elements/inputs";
+//@import "components/elements/social-list";
+//@import "components/elements/banner";
+//@import "components/elements/badge";
+@import "components/elements/scroll";
+
 @import "components/sections/header";
-@import "components/elements/cart";
-@import "components/elements/inputs";
-@import "components/elements/advanced-search";
-@import "components/elements/menu";
-@import "components/elements/list";
-@import "components/elements/filter";
-@import "components/elements/pagination";
-@import "components/elements/breadcrumb";
-@import "components/elements/tabs";
-@import "components/elements/file";
-@import "components/elements/card";
-@import "components/elements/mobile-menu";
-@import "components/elements/hamburger";
 @import "components/sections/hero";
-@import "components/sections/catalog";
 @import "components/sections/about";
-@import "components/sections/benefits";
-@import "components/sections/project";
-@import "components/sections/views";
+@import "components/sections/restaurants";
+//@import "components/sections/gallery";
 @import "components/sections/contacts";
-@import "components/sections/callback";
-@import "components/sections/second-hero";
-@import "components/sections/solutions";
-@import "components/sections/pluses";
-@import "components/sections/suppliers";
-@import "components/sections/who";
-@import "components/sections/cta";
-@import "components/sections/news";
-@import "components/sections/process";
-@import "components/sections/competence";
-@import "components/sections/products";
-@import "components/sections/digits";
-@import "components/sections/more";
-@import "components/sections/brand";
-@import "components/sections/gallery";
-@import "components/sections/cart";
-@import "components/elements/popup";
-@import "components/elements/cookie";
+//@import "components/sections/videos";
+//@import "components/sections/show";
+//@import "components/sections/second-hero";
+//@import "components/sections/classes";
+//@import "components/sections/raqsa";
+@import "components/sections/footer";
+
+
+//@import "components/elements/cart";
+
+
+
+//@import "components/elements/pagination";
+//@import "components/elements/breadcrumb";
+
+
+
+
+
+
+//@import "components/sections/benefits";
+
+//@import "components/sections/views";
+
+
+
+//@import "components/sections/pluses";
+//@import "components/sections/suppliers";
+
+
+//@import "components/sections/news";
+
+
+//@import "components/sections/products";
+//@import "components/sections/digits";
+//@import "components/sections/more";
+//@import "components/sections/brand";
+//@import "components/sections/gallery";
+//@import "components/sections/cart";
+//@import "components/elements/popup";
 
 
 
@@ -93,85 +115,10 @@ button {
     height: 300px;
   }
 }
-.selectize-control.single .selectize-input:after{
-  top: 32%;
-  width: 10px;
-  height: 10px;
-  border-bottom: 2px solid #2f3338;
-  border-right: 2px solid #2f3338;
+.background--purple{
+  background: $purple;
 }
-main{
-  margin-top: rem(122);
-  @media (max-width: $smDesktopWidth) {
-    margin-top: rem(57);
-  }
-}
-.selectize-control.single .selectize-input, .selectize-dropdown.single {
-  border-color: #cfd2d7;
-  box-shadow: none;
-  &.input-active{
-    border-color: #6C7482;
-  }
-}
-.selectize-dropdown.single{
-  border-color: #6C7482;
-}
-.selectize-dropdown{
-  border-radius: 0;
-  z-index: 13;
-}
-.selectize-input{
-  height: rem(44);
-  .item {
-    width: 100%;
-    top: rem(12);
-    left: rem(12);
-    height: rem(44);
-    position: absolute;
-    z-index: 350;
-    cursor: pointer;
-  }
-}
-.mm-spn li:before{
-  border-color: $mainFontColor;
-}
-.mm-spn.mm-spn--light,.mm-ocd__content  {
-  background: #F5F6F7;
-}
-.selectize-input input[type="select-one"] {
-  display: none!important;
-}
-.selectize-control.single .selectize-input, .selectize-dropdown.single{
-  border-color: #6c7482;
-}
-.selectize-control.single .selectize-input{
-  border-color: #cfd2d7;
-}
-.body{
-  #ui-id-2.ui-autocomplete{
-    @media (max-width: $smDesktopWidth) {
-      position: fixed;
-      top: auto!important;
-      bottom: 100px!important;
-    }
-  }
-  #ui-id-3.ui-autocomplete{
-    max-width: 359px!important;
-  }
-}
-.catalog{
-  #ui-id-2.ui-autocomplete{
-    @media (max-width: $smDesktopWidth) {
-      position: fixed;
-      top: auto!important;
-      bottom: 100px!important;
-    }
-  }
-  #ui-id-3.ui-autocomplete{
-    @media (max-width: $smDesktopWidth) {
-      position: fixed;
-      top: auto!important;
-      bottom: 100px!important;
-    }
-  }
+.time{
+  opacity: .7;
+  margin-bottom: rem(20);
 }

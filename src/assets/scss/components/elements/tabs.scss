@@ -1,175 +1,19 @@
-.tabs{
-  width: 100%;
+.tabs {
+  &__item {
+
+  }
   &__nav{
-    display: flex;
-    &-item{
-      margin-right: rem(1);
+    &-link{
+      color: #333232;
+      font-size: rem(20);
+      font-weight: 400;
+      margin-right: rem(40);
       &:last-child{
         margin-right: 0;
       }
-    }
-    &-link{
-      font-size: rem(18);
-      line-height: rem(24);
-      letter-spacing: -0.0075em;
-      background: $mainFontColor;
-      padding: rem(13) rem(56);
-      color: $default-color;
-      display: block;
-      transition: all .3s ease;
-      font-weight: bold;
-      @media (max-width: $smDesktopWidth) {
-        font-size: rem(16);
-        line-height: rem(24);
-        padding: rem(9) rem(36);
-      }
-      &:hover{
-        background: $gray-6;
-        color: $mainFontColor;
-      }
       &.active{
-        background: $gray-6;
-        color: $mainFontColor;
+        color: $gold;
       }
-    }
-  }
-  &__items{
-
-  }
-  &__item{
-    display: none;
-    background: $gray-6;
-    padding: rem(36) rem(36) rem(44) rem(36);
-    @media (max-width: $smDesktopWidth) {
-      padding: rem(28) rem(29) rem(32) rem(28);
-    }
-    h3{
-      margin-bottom: rem(16);
-    }
-    p{
-      margin-bottom: rem(16);
-    }
-    &.active{
-      display: block;
-    }
-  }
-}
-#tab-1{
-  line-height: 28px;
-  font-size: 18px;
-  padding-bottom: rem(28);
-  @media (max-width: $smDesktopWidth){
-    padding-bottom: 36px
-  }
-  @media (max-width: $tableWidth) {
-    line-height:1.6rem
-  }
-  p{
-    margin-top: 24px;
-    margin-bottom: 32px;
-    @media (max-width: $smDesktopWidth){
-      margin-top: 20px;
-      margin-bottom: 28px;
-    }
-  }
-  h2{
-    margin-top: 24px;
-    margin-bottom: 24px;
-    @media (max-width: $smDesktopWidth){
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-  }
-  ul{
-    margin-top: 24px;
-    margin-bottom: 32px;
-    @media (max-width: $smDesktopWidth) {
-      margin-top: 20px;
-      margin-bottom: 28px;
-    }
-    @media (max-width: $tableWidth) {
-      margin-bottom: 24px;
-    }
-    li{
-      padding-left: rem(7);
-      display: flex;
-      margin-bottom: 20px;
-      @media (max-width: $smDesktopWidth) {
-        line-height: 1.5rem;
-        margin-bottom: 16px;
-        font-size: 1rem;
-      }
-      @media (max-width: $tableWidth) {
-
-      }
-      &:last-child{
-        margin-bottom: 0;
-      }
-      &:before{
-        margin-top: 8px;
-        margin-right: rem(15);
-        content: '';
-        display: block;
-        min-width: rem(8);
-        height: rem(8);
-        background: $accent;
-        @media (max-width: $smDesktopWidth) {
-          margin-top: 7px;
-        }
-      }
-      a{
-        display: contents;
-        @media (max-width: $smDesktopWidth) {
-          line-height: 1.5rem;
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-  >div{
-    max-width: rem(667);
-    @media (max-width: $smDesktopWidth){
-      width: 100%;
-    }
-  }
-}
-#tab-2{
-  padding-bottom: rem(37);
-  >*{
-    max-width: rem(667);
-  }
-  h3{
-    margin-top: 32px;
-    margin-bottom: 16px;
-    @media (max-width: $smDesktopWidth) {
-
-    }
-    &:first-child{
-      margin-top: 0;
-    }
-  }
-  p{
-    margin-bottom: rem(12);
-    @media (max-width: $smDesktopWidth) {
-      margin-bottom: 4px;
-    }
-    &:last-child{
-
-    }
-  }
-}
-.mobile-char{
-  h3{
-    margin-top: rem(28);
-    margin-bottom: rem(16);
-    @media (max-width: $tableWidth) {
-      margin-bottom: 14px;
-    }
-  }
-  p{
-    margin-bottom: rem(8);
-    @media (max-width: $tableWidth) {
-      margin-bottom: 6px;
     }
   }
 }

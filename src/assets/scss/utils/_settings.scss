@@ -1,21 +1,25 @@
 html {
-  font-size: rem(16);
+  font-size: $mainFontSize;
   color: $mainFontColor;
   overflow-x: hidden;
   letter-spacing: -0.0075em;
+  &.no-scroll{
+    overflow: hidden;
+  }
 }
 
 
 body {
   position: relative;
-  background-color: $default-color;
   margin: 0;
   padding: 0;
   font-family: $mainFont;
   font-weight: $mainFontWeight;
+  font-size: 16px;
+  line-height: 170.68%;
   overflow-x: hidden;
-  @media (max-width: $smDesktopWidth) {
-    padding-bottom: rem(56);
+  &.no-scroll{
+    overflow: hidden;
   }
 }
 
@@ -63,7 +67,6 @@ textarea, textarea:active, textarea:focus, textarea:hover {
   outline-style: none;
   box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
   text-decoration: none;
-  border: none;
 }
 
 a, a:active, a:focus, a:hover {
@@ -86,98 +89,95 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: $mainFont;
-  font-weight: bold;
+  font-family: $fontPrata;
+  font-weight: 400;
   color: $mainFontColor;
 }
 
 h1, .h1 {
-  font-weight: bold;
-  font-size: rem(36);
-  line-height: rem(44);
-  letter-spacing: -0.0125em;
-  @media (max-width: $smDesktopWidth) {
-    font-size: rem(24);
-    line-height: rem(32);
+  font-size: 70px;
+  line-height: 141.5%;
+  letter-spacing: 0.115em;
+  @media (max-width: $tableWidth) {
+    font-size: rem(46);
+    line-height: rem(56);
+  }
+  &.small{
+    font-size: rem(29);
+    line-height: rem(49);
+    opacity: .3;
   }
 }
 
 h2, .h2 {
-  font-weight: bold;
-  font-size: rem(28);
-  line-height: rem(36);
-  letter-spacing: -0.0175em;
-  @media (max-width: $smDesktopWidth) {
-    font-size: rem(24);
-    line-height: rem(32);
+  font-size: 32px;
+  line-height: 43px;
+  letter-spacing: 0.06em;
+  color: #AF815E;
+  @media (max-width: $desktopWidth) {
+
   }
   @media (max-width: $tableWidth) {
-    font-size: rem(22);
-    line-height: rem(28);
+
   }
 }
 
 h3, .h3 {
-  font-weight: bold;
-  font-size: rem(24);
-  line-height: rem(28);
-  letter-spacing: -0.02em;
-  @media (max-width: $smDesktopWidth) {
-    font-size: rem(22);
-    line-height: rem(28);
+  font-size: rem(42);
+  line-height: rem(92);
+  @media (max-width: $desktopWidth) {
+    font-size: rem(28);
+    line-height: rem(36);
+    margin-bottom: rem(30);
   }
   @media (max-width: $tableWidth) {
-    font-size: rem(20);
-    line-height: rem(24);
+
+
   }
 }
 
 h4, .h4 {
-  font-weight: bold;
-  font-size: rem(20);
-  line-height: rem(24);
-  letter-spacing: -0.005em;
-  @media (max-width: $smDesktopWidth) {
-    font-size: rem(18);
-    line-height: rem(20);
+  font-size: 18px;
+  line-height: 25px;
+  color: #F5F7F2;
+  font-family: $mainFont;
+  @media (max-width: $desktopWidth) {
+
   }
   @media (max-width: $tableWidth) {
-    font-size: 1rem;
-    line-height: 1.25rem;
+
   }
 }
 
 h5, .h5 {
-  font-weight: bold;
-  font-size: rem(18);
-  line-height: rem(24);
-  letter-spacing: -0.0075em;
-  @media (max-width: $smDesktopWidth) {
-    font-size: rem(16);
-    line-height: rem(20);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140.68%;
+  font-family: $mainFont;
+  @media (max-width: $desktopWidth) {
+
   }
   @media (max-width: $tableWidth) {
-    font-size: rem(16);
-    line-height: rem(20);
+
   }
 }
 
 h6, .h6 {
   font-weight: bold;
-  font-size: rem(16);
-  line-height: rem(24);
-  letter-spacing: -0.0075em;
+  font-size: rem(17);
+  line-height: rem(25);
+  margin-bottom: rem(10);
 }
 
 .container {
   position: relative;
   width: 100%;
-  max-width: 80rem;
+  max-width: 94rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   margin: 0 auto;
   height: 100%;
-  @media (max-width: $smDesktopWidth) {
+  @media (max-width: $desktopWidth) {
     padding-left: rem(32);
     padding-right: rem(32);
     width: 100%;
@@ -186,213 +186,53 @@ h6, .h6 {
   @media (max-width: $tableWidth) {
     padding: 0 rem(16);
   }
+  &-fluid{
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    @media (max-width: $desktopWidth) {
+      padding-left: rem(32);
+      padding-right: rem(32);
+      width: 100%;
+      max-width: 100%;
+    }
+    @media (max-width: $tableWidth) {
+      padding: 0 rem(16);
+    }
+  }
 }
 
 section {
   position: relative;
 }
 
-.link {
-  font-size: rem(16);
-  line-height: rem(24);
-  letter-spacing: -0.0125em;
-  transition: all .3s linear;
-  display: flex;
-  align-items: center;
-  @media (max-width: $tableWidth) {
-    font-size: rem(14);
-    line-height: rem(24);
-  }
-
-  &:hover {
-    opacity: 0.5;
-  }
-  &--1{
-    @extend .link;
-    color: $accent;
-    text-decoration: underline;
-    &:hover{
-      color: $accent-hover;
-    }
-  }
-  &--2 {
-    @extend .link;
-    color: $default-color;
-    border-bottom: 1px solid $default-color;
-    display: inline;
-    &:hover {
-      opacity: 0.64;
-    }
-  }
-
-  &--show {
-    display: none;
-    @media (max-width: $tableWidth) {
-      color: $gray-6;
-      background: $mainFontColor;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: rem(14);
-      line-height: rem(16);
-      padding: rem(14) rem(16);
-      font-weight: bold;
-    }
-  }
-
-  &--more {
-    font-weight: bold;
-    font-size: rem(14);
-    line-height: rem(16);
-    color: $gray-6;
-    padding: rem(18) rem(16);
-    background: $gray;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: rem(8);
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    .icon {
-      fill: $default-color;
-    }
-  }
-
-  &--product {
-    font-weight: bold;
-    color: $default-color;
-    background: $mainFontColor;
-    padding: rem(11) rem(12) rem(13) rem(16);
-    font-size: rem(16);
-    line-height: rem(24);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: rem(1);
-    width: 100%;
-
-    .icon {
-      fill: $default-color;
-    }
-  }
-}
-
-.heading {
-  &--line {
+.title{
+  &--line{
     position: relative;
-    padding-bottom: rem(13);
-
-    &:after {
-      position: absolute;
-      bottom: 0;
-      height: rem(4);
-      width: rem(32);
-      background: $accent;
-      display: block;
+    display: flex;
+    justify-content: center;
+    &:before{
+      background: #F5F7F2;
       content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      left: 0;
+      margin-right: 15px;
+      margin-top: 12px;
     }
-  }
-
-  &--with-right {
-    min-width: rem(254);
-    max-width: rem(254);
-    margin-right: rem(20);
-    @media (max-width: $smDesktopWidth) {
-      margin-right: 0;
-      max-width: 100%;
-      min-width: auto;
-      width: 100%;
+    &:after{
+      background: #F5F7F2;
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      left: 0;
+      margin-left: 15px;
+      margin-top: 12px;
     }
-
-    br {
-      @media (max-width: $smDesktopWidth) {
-        display: none;
-      }
-    }
-  }
-}
-
-h1 {
-  &.heading--line {
-    padding-bottom: 1rem;
-    @media (max-width: $smDesktopWidth) {
-      padding-bottom: rem(15);
-    }
-
-    &:after {
-      height: rem(8);
-      width: rem(48);
-    }
-
-  }
-}
-
-h1 {
-  &.heading--line {
-    &:after {
-      height: rem(8);
-    }
-  }
-}
-
-.status {
-  font-weight: bold;
-  font-size: rem(10);
-  line-height: rem(12);
-  letter-spacing: -0.005em;
-  width: 100%;
-  position: absolute;
-  bottom: rem(4);
-  right: rem(6);
-  @media (max-width: $smDesktopWidth) {
-    font-size: rem(9);
-  }
-}
-
-.code {
-  opacity: .5;
-  font-size: rem(18);
-  line-height: rem(28);
-  letter-spacing: -0.0075em;
-  margin-top: rem(8);
-  display: block;
-  @media (max-width: $smDesktopWidth) {
-    font-size: rem(16);
-  }
-}
-
-.promo {
-  color: $accent;
-  font-size: rem(16);
-  line-height: rem(28);
-  letter-spacing: -0.0075em;
-  margin-top: rem(32);
-  display: block;
-  @media (max-width: $smDesktopWidth) {
-    font-size: rem(15);
-    margin-right: rem(28);
-    line-height: 1.5;
-  }
-}
-
-footer {
-  background: #292C2E;
-  font-size: rem(14);
-  line-height: rem(16);
-  text-align: center;
-  color: $default-color;
-}
-
-.background {
-  &--gray-6 {
-    background-color: $gray-6;
-  }
-
-  &--main {
-    background-color: $mainFontColor;
   }
 }
 
@@ -405,621 +245,89 @@ footer {
     width: 100%;
   }
 }
-
-.date {
-  color: #CFD2D7;
-  @media (max-width: $smDesktopWidth) {
-    font-size: rem(14);
-    line-height: rem(16);
-  }
-}
-
-.price {
-  font-weight: bold;
-  font-size: rem(18);
-  line-height: rem(24);
-  letter-spacing: -0.0075em;
-  @media (max-width: $tableWidth) {
-    font-size: rem(16);
-  }
-}
-
-.counter {
-  display: flex;
-  margin-right: rem(48);
-
-  &__item, &__item:focus {
-    transition: all .3s linear;
-    padding: rem(4);
-    width: rem(33);
-    height: rem(33);
-    border: 1px solid $accent;
-    background: $default-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    @media (max-width: $smDesktopWidth) {
-      width: rem(32);
-      height: rem(32);
-    }
-
-    .icon {
-      transition: all .3s linear;
-    }
-
-    &:hover {
-      background: $accent;
-
-      .icon {
-        fill: $default-color;
-      }
-    }
-  }
-
-  &__digit {
-    width: rem(80);
-    text-align: center;
-    font-size: rem(18);
-    line-height: rem(20);
-    letter-spacing: -0.01em;
-    -moz-appearance: textfield;
-    -webkit-appearance: textfield;
-
-    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+.slick-dots{
+  width: auto;
+  li{
+    margin: 0 rem(13) 0 0;
+    width: rem(11);
+    height: rem(11);
+    &:before{
       display: none;
     }
-  }
-}
-
-.section {
-  &--contacts {
-    background: $gray-6;
-  }
-
-  &--callback {
-    background: $gray;
-  }
-
-  &--goal {
-    .text--boxed {
-      padding-top: 0;
-      padding-bottom: 0;
-      @media (max-width: $smDesktopWidth) {
-        padding: 0;
-        margin-bottom: rem(0);
+    &:last-child{
+      margin-right: 0;
+    }
+    button{
+      border-radius: 100%;
+      border: 1px solid #aaaaaa;
+      padding: 0;
+      margin: 0;
+      width: rem(11);
+      height: rem(11);
+      font-size: 0;
+      &:before{
+        display: none;
       }
     }
-  }
-
-  &--catalog {
-    @media (max-width: $tableWidth) {
-      display: none;
-    }
-
-    &-mobile {
-      display: none;
-      @media (max-width: $tableWidth) {
-        display: block;
+    &.slick-active{
+      button{
+        border: 1px solid $gold;
       }
-
-      .card {
-        @media (max-width: $tableWidth) {
-          min-height: rem(108);
-          padding: rem(15) rem(16) rem(13) rem(13);
-          overflow-y: hidden;
-          margin-bottom: 0;
-        }
-        &:hover{
-          .card__link{
-            @media (max-width: $tableWidth){
-              color: $default-color;
-            }
-
-          }
-        }
-
-        &--catalog__image {
-          @media (max-width: $tableWidth) {
-            right: rem(16);
-            bottom: rem(-16);
-          }
-        }
-      }
-    }
-  }
-
-  &--partners {
-    a {
-      width: calc(100% / 8 - 560px / 7);
-      margin-right: rem(80);
-      margin-bottom: rem(20);
-      &:hover{
-        opacity: .5;
-      }
-      &:nth-child(8n+8) {
-        margin-right: 0;
-      }
-
-      @media (max-width: $smDesktopWidth) {
-        width: calc(100% / 8 - 280px / 7);
-        margin-right: rem(40);
-      }
-
-      img {
-        filter: grayscale(100%);
-        margin: 0 auto;
-        display: block;
-      }
-    }
-
-    @media (max-width: $tableWidth) {
-      display: none;
-    }
-  }
-
-  &--process {
-    &-about {
-      @media (max-width: $tableWidth) {
-        padding-bottom: rem(60);
-      }
-      .process {
-        .card {
-          @media (max-width: $tableWidth) {
-            width: 100%;
-            padding: rem(20);
-            margin-right: 0;
-            margin-bottom: rem(12);
-          }
-          @media (max-width: $tableWidth) {
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-
-        }
-      }
-    }
-  }
-
-  &--project {
-    &-single {
-      .card {
-        margin-bottom: rem(40);
-        @media (max-width: $smDesktopWidth) {
-          margin-bottom: rem(32);
-        }
-        @media (max-width: $tableWidth) {
-          width: 100% !important;
-          margin-bottom: rem(20);
-          margin-right: 0 !important;
-          display: flex;
-          flex-direction: row;
-        }
-
-        &--project {
-          &__image {
-            @media (max-width: $tableWidth) {
-              width: 30%;
-            }
-          }
-
-          &__content {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            @media (max-width: $tableWidth) {
-              width: 70%;
-              padding: .75rem .75rem .5rem .75rem;
-            }
-          }
-        }
-      }
-    }
-    .link{
-      margin-right: -8px;
-    }
-    &-slider{
-      .link{
-        margin-right: -8px;
-        z-index: 10;
-      }
-    }
-  }
-
-  &--suppliers{
-    .link{
-      margin-right: -8px;
-    }
-    &-slider{
-      .link{
-        margin-right: -8px;
-        z-index: 10;
-      }
-    }
-  }
-
-  &--news {
-    &-single {
-      .news {
-        display: flex;
-        flex-wrap: wrap;
-
-        .card {
-          width: calc(100% / 2 - 20px);
-          margin-right: rem(20);
-          margin-bottom: rem(40);
-          @media (max-width: $smDesktopWidth) {
-            margin-bottom: rem(32);
-            padding: rem(16) 0 rem(16) rem(12);
-          }
-          @media (max-width: $tableWidth) {
-            margin-bottom: rem(36);
-            margin-right: 0;
-            width: 100%;
-            padding: 0 0 rem(23) 0;
-            border-left: 0;
-            border-bottom: 1px solid $gray-4;
-          }
-
-          &:nth-child(even) {
-            margin-right: 0;
-          }
-
-          h5 {
-            @media (max-width: $tableWidth) {
-              margin-bottom: rem(53);
-            }
-          }
-        }
-      }
-      ul{
-        margin-top: 24px;
-        @media (max-width: $smDesktopWidth) {
-          margin-top: 20px;
-        }
-        @media ($tableWidth) {
-          margin-top: 16px;
-        }
-        li{
-          margin-bottom: 20px;
-          @media (max-width: $smDesktopWidth) {
-            margin-bottom: 16px;
-          }
-          &:last-child{
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-
-    .link{
-      margin-right: -8px;
-    }
-    &-mobile{
-      .link{
-        margin-right: -8px;
-        z-index: 10;
-      }
-    }
-  }
-  &--delivery{
-    margin-bottom: rem(4);
-
-  }
-  &--gallery{
-    h3{
-      &:after{
-        @media (max-width: $tableWidth) {
-          display: none;
-        }
-      }
-      &.heading--line{
-        @media (max-width: $tableWidth) {
-          padding-bottom: 0;
-        }
-      }
-
     }
   }
 }
+.slick-arrow{
+  width: rem(60);
+  height: rem(60);
+  &:before{
+    display: none;
+  }
+  .icon{
+    position: absolute;
+    width: rem(24);
+    height: rem(24);
+    top: rem(17);
+    left: rem(16);
+    fill: $gold;
+  }
+  &.slick-prev{
+    .progress-ring{
+      transform: rotate(-50deg);
+    }
+    &.slick-next{
 
-.show-categories {
-  background: $gray;
+      transform: rotate(80deg);
+    }
+  }
+  &:hover{
+    .progress-ring{
+      stroke-dashoffset: 0;
+    }
+  }
 }
-
-.show-vendors {
-  background: $secondary;
-}
-
-.slick-dotted.slick-slider {
-  margin-bottom: 0;
-}
-
-.loader {
+.circle-arrow{
+  position: relative;
   width: 100%;
   height: 100%;
-  position: fixed;
+  display: block;
+
+}
+.progress-ring{
+  position: absolute;
+  transition: 0.35s stroke-dashoffset;
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+  z-index: 2;
   left: 0;
   top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#msMiniCart, .msMiniCart {
-  font-size: rem(16) !important;
-}
-
-.jGrowl-notification {
-  font-size: rem(16) !important;
-  line-height: rem(24);
-  color: $default-color !important;
-  background: $mainFontColor !important;
-  min-width: rem(434) !important;
-  border-radius: 0!important;
-  opacity: 1!important;
-  @media (max-width: $tableWidth) {
-    min-width: auto !important;
-    max-width: 100% !important;
+  &:not(.progress-ring--2){
+    circle-arrow: 163.362, 163.362;
+    stroke-dashoffset: 90.717;
   }
-  >button.jGrowl-close{
-    font-size: 0;
-    width: 24px;
-    height: 24px;
-    background-repeat:no-repeat;
-    padding: 0;
-    background-image: url("/assets/img/close-white.svg");
+  &--2{
+    z-index: 1;
   }
 }
-.jGrowl-message{
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.0075em;
-  font-family: $mainFont;
-}
-.ms2-message-success {
-  background-color: $mainFontColor !important;
-  padding: rem(20) rem(16) !important;
-}
-
-.section--delivery {
-  @media (max-width: $tableWidth) {
-    margin-bottom: .25rem;
-  }
-
-  ul {
-    li {
-      padding-left: rem(7);
-      display: flex;
-      margin-bottom: rem(20);
-      @media (max-width: $tableWidth) {
-        margin-bottom: rem(16);
-      }
-
-      &:before {
-        margin-right: rem(15);
-        content: '';
-        display: block;
-        width: rem(8);
-        height: rem(8);
-        background: $accent;
-      }
-    }
-  }
-
-  .w-50 {
-    @media (max-width: $smDesktopWidth) {
-      width: 48%;
-    }
-    @media (max-width: $tableWidth) {
-      width: 100%;
-    }
-  }
-}
-
-.who-wrap-project {
-  @media (max-width: $tableWidth) {
-    flex-wrap: wrap;
-  }
-
-  .list__item {
-    @media (max-width: $tableWidth) {
-      width: 100%;
-      max-width: 100%;
-      margin-bottom: rem(16);
-    }
-
-    &:last-child {
-      @media (max-width: $tableWidth) {
-        margin-bottom: 0;
-      }
-    }
-  }
-}
-
-.jgrowl-bottom {
-  margin-top: rem(60);
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  @media (max-width: $tableWidth) {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  .btn--white{
-    border: none;
-    margin-right: 28px;
-    font-family: $mainFont;
-    @media (max-width: $tableWidth){
-      text-align: center;
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-  }
-  .btn--red {
-    background-color: $accent !important;
-    font-weight: 400 !important;
-    font-size: 16px;
-    line-height: 20px;
-    @media (max-width: $tableWidth){
-      width: 100%;
-    }
-  }
-}
-
-.views__slider {
-  .slick-track {
-    margin-left: 0;
-  }
-  .card{
-    transition: all .3s ease-in-out;
-    &:hover{
-      border-color: $accent;
-    }
-  }
-}
-
-.content-single{
-  font-size: rem(18);
-  line-height: rem(28);
-  @media (max-width: $smDesktopWidth) {
-    font-size: rem(16);
-    line-height: rem(24);
-  }
-  h2{
-    margin-top: 24px;
-    margin-bottom: 24px;
-    @media (max-width: $smDesktopWidth) {
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-    @media (max-width: $tableWidth) {
-      margin-top: 16px;
-      margin-bottom: 16px;
-    }
-  }
-  ul{
-    margin-bottom: 32px;
-    @media (max-width: $smDesktopWidth) {
-      margin-top: 16px;
-      margin-bottom: 28px;
-    }
-    @media (max-width: $tableWidth) {
-      margin-bottom: 24px;
-    }
-    li{
-      padding-left: rem(7);
-      display: flex;
-      @media (max-width: $smDesktopWidth) {
-
-      }
-      &:before{
-        margin-top: 8px;
-        margin-right: rem(15);
-        content: '';
-        display: block;
-        min-width: rem(8);
-        height: rem(8);
-        background: $accent;
-      }
-      a{
-        display: contents;
-      }
-    }
-  }
-  p{
-    margin-top: 24px;
-    margin-bottom: 32px;
-    @media (max-width: $smDesktopWidth) {
-      margin-top: 20px;
-      margin-bottom: 28px;
-    }
-    @media (max-width: $tableWidth) {
-      margin-top: 16px;
-      margin-bottom: 24px;
-    }
-  }
-  &-404{
-    max-width: rem(816);
-    margin: 0 auto;
-    ul{
-      color: $accent;
-      list-style-position: inside;
-      margin-bottom: rem(60);
-      margin-top: rem(24);
-      @media (max-width: $smDesktopWidth) {
-        margin-bottom: rem(48);
-        margin-top: rem(20);
-      }
-      @media (max-width: $tableWidth) {
-        margin-bottom: rem(32);
-        margin-top: rem(16);
-      }
-      li{
-        padding-left: rem(7);
-        display: flex;
-        margin-bottom: 20px;
-        color: $accent;
-        font-size: 18px;
-        line-height: 24px;
-        @media (max-width: $smDesktopWidth) {
-          font-size: 16px;
-          line-height: 20px;
-          margin-bottom: 16px;
-        }
-        @media (max-width: $tableWidth) {
-          margin-bottom: 20px;
-        }
-        &:last-child{
-          margin-bottom: 0;
-        }
-        &:before{
-          margin-right: rem(15);
-          content: '';
-          display: block;
-          min-width: 10px;
-          width: 10px;
-          height: 10px;
-          background: $accent;
-          @media (max-width: $smDesktopWidth) {
-            width: 8px;
-            height: 8px;
-            min-width: 8px;
-            margin-top: 7px;
-          }
-        }
-        a{
-          font-size: 18px;
-          line-height: 24px;
-          color: $accent;
-          display: contents;
-          text-decoration: underline;
-          @media (max-width: $smDesktopWidth) {
-            font-size: 16px;
-            line-height: 20px;
-          }
-          &:hover{
-            text-decoration: none;
-            color: $accent-hover;
-          }
-        }
-      }
-    }
-  }
-  a{
-    color: $accent;
-    text-decoration: underline;
-    font-size: rem(18);
-    line-height: rem(28);
-
-    letter-spacing: -0.0075em;
-    &:hover{
-      color: $accent-hover;
-    }
-  }
-}
-.ui-autocomplete-loading {
-  background: none!important;
+.section{
+  padding: 80px 0;
 }

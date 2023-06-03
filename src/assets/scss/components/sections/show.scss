@@ -1,0 +1,65 @@
+.show{
+  padding-top: 18vh;
+  padding-bottom: rem(40);
+  h1{
+    font-size: rem(63);
+    line-height: rem(100);
+    @media (max-width: $tableWidth) {
+      font-size: rem(46);
+      line-height: rem(56);
+    }
+    span{
+      display: block;
+      font-size: rem(148);
+      line-height: rem(145);
+      @media (max-width: $tableWidth) {
+        font-size: rem(66);
+        line-height: rem(106);
+      }
+    }
+  }
+  &--anastasia{
+    padding-top: 0;
+    margin-top: -30vh;
+    @media (max-width: $tableWidth) {
+      margin-top: 0;
+    }
+  }
+  &__description{
+    max-width: rem(530);
+    margin: 0 auto 20px auto;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card--show{
+    width: calc(50% - 24px);
+    margin-right: 24px;
+    margin-top: 30px;
+    &:nth-child(even){
+      margin-right: 0;
+    }
+    @media (max-width: $tableWidth) {
+      width: 100%;
+      margin-right: 0;
+    }
+    .card__content{
+      @media (max-width: $smDesktopWidth) {
+        padding: 0 rem(20);
+      }
+    }
+  }
+  .card{
+    width: calc(50% - 24px);
+    margin-right: 24px;
+    margin-top: 30px;
+    &:nth-child(even){
+      margin-right: 0;
+    }
+    @media (max-width: $tableWidth) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}

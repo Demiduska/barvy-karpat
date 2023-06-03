@@ -6,21 +6,24 @@
     font-size: rem(16);
     line-height: rem(18);
     color: $default-color;
-    background: $gray-2;
+    background: transparent;
     padding: rem(12);
     margin-bottom: rem(24);
+    border-radius: 6px;
+    border: 1px solid #989898;
     &::placeholder{
       color: $gray-4;
     }
   }
   &--textarea{
-    background: $gray-2;
+    background: transparent;
+    border: 1px solid #989898;
     color: $default-color;
     padding: rem(12) rem(14);
     height: 100%;
     font-size: rem(16);
     line-height: rem(18);
-    max-height: rem(180);
+    border-radius: 6px;
     &::placeholder{
       font-size: rem(16);
       line-height: rem(18);

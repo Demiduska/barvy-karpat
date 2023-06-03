@@ -1,0 +1,68 @@
+.videos{
+  padding-bottom: rem(60);
+  &__slider{
+    @media (max-width:$smDesktopWidth){
+      margin-top: rem(30);
+    }
+    .slick-list{
+      overflow-y: auto!important;
+      min-height: rem(530);
+      @media (max-width:$smDesktopWidth){
+        min-height: 100%;
+        overflow: hidden!important;
+      }
+      .slick-track{
+        display: flex;
+        align-items: center;
+        min-height: rem(530);
+        @media (max-width:$smDesktopWidth){
+          min-height: 100%;
+        }
+      }
+    }
+    &-item{
+      transition: all .3s ease;
+      width: 33%;
+      position: relative;
+      transform: scale(1);
+      transform-origin: center;
+      margin: 0 10px;
+      &.slick-center{
+        transform: scale(1.4);
+        z-index: 11;
+        @media (max-width:$smDesktopWidth){
+          transform: scale(1);
+        }
+      }
+    }
+    .slick-dots{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      bottom: rem(30);
+      @media (max-width:$smDesktopWidth){
+        bottom: rem(-25);
+      }
+    }
+    .slick-next{
+      right: 27%;
+      z-index: 10;
+      @media (max-width:$smDesktopWidth){
+        right: 0;
+      }
+    }
+    .slick-prev{
+      left: 27%;
+      z-index: 10;
+      @media (max-width:$smDesktopWidth){
+        left: 0;
+      }
+    }
+  }
+  .card--video{
+    .hero__button-video{
+      top: 30%;
+      left: 35%;
+    }
+  }
+}

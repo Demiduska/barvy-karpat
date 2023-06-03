@@ -2,137 +2,18 @@
   &--uppercase{
     text-transform: uppercase;
   }
-  &--white{
-    color: $default-color;
-  }
-  &--accent{
-    color: $accent;
-    .icon{
-      fill: $accent;
-    }
-  }
-  &--gray-3{
-    color: $gray-3;
-  }
-  &--gray-4{
-    color: $gray-4;
-  }
-  &--gray-5{
-    color: $gray-5;
-  }
-  &--gray-6{
-    color: $gray-6;
-  }
-  &--gray-7{
-    color: $gray-7;
-  }
-  &--gold{
-    color: $gold;
+  &--center{
+    text-align: center;
   }
   &--small{
-    &-2{
-      font-size: rem(16);
-      line-height: rem(24);
-    }
+    font-size: rem(10);
+    line-height: rem(15);
   }
-  &--boxed{
-    background: $gray-6;
-    padding: 2.75rem 2.25rem 12px;
-    font-size: rem(18);
-    line-height: rem(28);
-    letter-spacing: -0.0075em;
-    @media (max-width: $smDesktopWidth) {
-      font-size: rem(16);
-      line-height: rem(24);
-      padding: 2.15rem 1.75rem 6px
-    }
-    @media (max-width: $tableWidth){
-      padding: 1.75rem 1rem 6px;
-      line-height: rem(28);
-    }
-    a{
-      font-size: rem(18);
-      line-height: rem(28);
-      letter-spacing: -0.0075em;
-      color: $accent;
-      @media (max-width: $smDesktopWidth) {
-        font-size: rem(16);
-        line-height: rem(27);
-      }
-      &:hover{
-        text-decoration: underline;
-      }
-    }
-    &-2{
-      @extend .text--boxed;
-      background: $mainFontColor;
-      color: $default-color;
-    }
-    h2,h4{
-      margin-top: 24px;
-      margin-bottom: 24px;
-      @media (max-width: $smDesktopWidth) {
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      @media (max-width: $tableWidth) {
-        margin-top: 16px;
-        margin-bottom: 16px;
-      }
-    }
-    ul{
-      margin-bottom: 32px;
-      @media (max-width: $smDesktopWidth) {
-        margin-top: 16px;
-        margin-bottom: 28px;
-      }
-      @media (max-width: $tableWidth) {
-        margin-bottom: 24px;
-      }
-      li{
-        padding-left: rem(7);
-        display: flex;
-        @media (max-width: $smDesktopWidth) {
-
-        }
-        &:before{
-          margin-top: 8px;
-          margin-right: rem(15);
-          content: '';
-          display: block;
-          min-width: rem(8);
-          height: rem(8);
-          background: $accent;
-        }
-        a{
-          display: contents;
-        }
-      }
-    }
-    p{
-      margin-top: 24px;
-      margin-bottom: 24px;
-      &:first-child{
-        margin-top: 0;
-      }
-      @media (max-width: $smDesktopWidth) {
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      @media (max-width: $tableWidth) {
-        margin-top: 16px;
-        margin-bottom: 16px;
-      }
-    }
-
+  &--medium{
+    font-size: rem(17);
+    line-height: rem(25);
   }
-  &--body{
-    @media(max-width: $tableWidth){
-      font-size: rem(16);
-      line-height: rem(28);
-    }
-    a{
-      color: $accent;
-    }
+  &--bold{
+    font-weight: bold;
   }
 }

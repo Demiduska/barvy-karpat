@@ -4,8 +4,8 @@
   "description": "My template",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
-    "build": "webpack --config ./build/webpack.build.conf.js"
+    "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && webpack --config ./build/webpack.build.conf.js"
   },
   "browserslist": [
     "> 1%",
@@ -30,23 +30,28 @@
   "license": "MIT",
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
-    "animate.css": "^4.1.0",
+    "animate.css": "^4.1.1",
+    "animejs": "^3.2.1",
     "blazy": "^1.8.2",
     "bootstrap": "^4.4.1",
     "fullpage.js": "^3.0.9",
     "inputmask": "^5.0.5",
     "jquery": "^3.5.0",
+    "jquery-datetimepicker": "^2.5.21",
     "jquery-validation": "^1.19.2",
     "jquery.nicescroll": "^3.7.6",
     "letteringjs": "^0.7.0",
+    "masonry-layout": "^4.2.2",
     "mmenu-light": "^3.0.8",
     "multi-menu": "^0.1.2",
     "normalize-css": "^2.3.1",
     "popper.js": "^1.16.1",
+    "sass": "^1.62.1",
     "selectize": "^0.12.6",
     "slick-carousel": "^1.8.1",
     "smooth-scrollbar": "^8.6.1",
-    "textillate": "^0.4.1"
+    "textillate": "^0.4.1",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
@@ -60,7 +65,6 @@
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.1.2",

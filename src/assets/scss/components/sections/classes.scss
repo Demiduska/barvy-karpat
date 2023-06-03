@@ -1,0 +1,37 @@
+.classes{
+  padding-top: 18vh;
+  padding-bottom: rem(40);
+  h1{
+    font-size: rem(91);
+    span{
+      display: block;
+      font-size: rem(113);
+      line-height: rem(110);
+      font-weight: bold;
+    }
+  }
+  p{
+    font-size: rem(13);
+    line-height: rem(25);
+  }
+  &__description{
+    max-width: rem(530);
+    margin: 20px auto 0 auto;
+  }
+  &__list{
+    margin-top: rem(50);
+  }
+  .badge{
+    margin-right: rem(35);
+    margin-bottom: rem(25);
+    @media (max-width: $tableWidth) {
+      margin-right: rem(20);
+    }
+  }
+  .card--classes{
+    margin-bottom: rem(58);
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

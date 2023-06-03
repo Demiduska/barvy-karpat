@@ -1,26 +1,8 @@
 .icon{
   width: rem(24);
   height: rem(24);
-  fill: #2F3338;
-  &--search{
-
-  }
-  &--filter{
-    fill: $accent;
-  }
-  &--accent{
-    fill: $accent;
-  }
-  &--white{
-    fill: $default-color;
-  }
-  &--arrow-right{
-    fill: $default-color;
-  }
-  &--chevron-right{
-    padding: 4px 2px;
-  }
-  &--chevron-left{
-    transform: rotate(180deg);
+  fill: $default-color;
+  &--youtube{
+    padding-top: rem(7);
   }
 }

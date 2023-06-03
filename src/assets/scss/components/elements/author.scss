@@ -1,0 +1,14 @@
+.author{
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(30);
+  &__image{
+    max-width: rem(75);
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: rem(20);
+  }
+  &__name{
+    margin-bottom: rem(5);
+  }
+}
