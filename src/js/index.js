@@ -235,10 +235,10 @@ $(function () {
       $(this).removeClass('focus');
     }
   });
-  $('.datetimepicker').datetimepicker({
-    theme:'dark',
-    minDate: 0,
-  });
+  // $('.datetimepicker').datetimepicker({
+  //   theme:'dark',
+  //   minDate: 0,
+  // });
 
 });
 
